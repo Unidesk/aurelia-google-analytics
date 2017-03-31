@@ -128,10 +128,14 @@ System.register(['aurelia-dependency-injection', 'aurelia-event-aggregator', 'au
 
 						var dimensionOrMetric = _ref;
 
-						ga('set', dimensionOrMetric[0], dimensionOrMetric[1]);
+						this.set(dimensionOrMetric[0], dimensionOrMetric[1]);
 					}
 
 					this._initialized = true;
+				};
+
+				Analytics.prototype.set = function set(dimensionOrMetric, value) {
+					ga('set', dimensionOrMetric, value);
 				};
 
 				Analytics.prototype._attachClickTracker = function _attachClickTracker() {

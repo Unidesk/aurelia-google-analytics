@@ -138,10 +138,14 @@ export class Analytics {
 		ga('create', id, 'auto');
 
 		for (var dimensionOrMetric of customFields) {
-			ga('set', dimensionOrMetric[0], dimensionOrMetric[1]);
+			this.set(dimensionOrMetric[0], dimensionOrMetric[1]);
 		}
 
 		this._initialized = true;
+	}
+
+	set(dimensionOrMetric, value) {
+		ga('set', dimensionOrMetric, value);
 	}
 
 	_attachClickTracker() {
