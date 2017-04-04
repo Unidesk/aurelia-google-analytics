@@ -144,8 +144,8 @@ export class Analytics {
 		this._initialized = true;
 	}
 
-	set(dimensionOrMetric, value) {
-		ga('set', dimensionOrMetric, value);
+	set(name, value) {
+		ga('set', name, value);
 	}
 
 	_attachClickTracker() {
