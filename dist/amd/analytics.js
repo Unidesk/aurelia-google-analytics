@@ -153,8 +153,8 @@ define(['exports', 'aurelia-dependency-injection', 'aurelia-event-aggregator', '
 			this._initialized = true;
 		};
 
-		Analytics.prototype.set = function set(dimensionOrMetric, value) {
-			ga('set', dimensionOrMetric, value);
+		Analytics.prototype.set = function set(name, value) {
+			ga('set', name, value);
 		};
 
 		Analytics.prototype._attachClickTracker = function _attachClickTracker() {
